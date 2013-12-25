@@ -1,6 +1,21 @@
 - if user_signed_in?
   %p
-    Вы: #{current_user.email}
+    #{current_user.email}
   = link_to 'Выход', destroy_user_session_path, :method => :delete
 - else
-  = link_to 'Вход', new_user_session_path
+  %a.btn.btn-primary.btn-lg{"data-toggle" => "modal", href: "#myModal"} Launch demo modal
+
+  #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+          %h4.modal-title Modal title
+        .modal-body
+          \...
+        .modal-footer
+          %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+          %button.btn.btn-primary{type: "button"} Save changes
+      / /.modal-content
+    / /.modal-dialog
+  / /.modal
