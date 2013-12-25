@@ -1,0 +1,6 @@
+- if user_signed_in?
+  %p
+    Вы: #{current_user.email}
+  = link_to 'Выход', destroy_user_session_path, :method => :delete
+- else
+  = link_to 'Вход', new_user_session_path
