@@ -11,6 +11,7 @@
     = render 'layouts/header'
     %main{:role => "main"} 
       = render 'layouts/messages'
+      = render 'layouts/sidebar'
       = yield
       = render 'layouts/footer'
   = debug(params) if  Rails.env.development?

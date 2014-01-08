@@ -1,15 +1,28 @@
 -# navigation styled for Bootstrap 3.0
-%header.navbar.navbar-default.navbar-fixed-top{:role=>'banner'}
+-#%header.navbar.navbar-default.navbar-fixed-top{:role=>'banner'}
+-#  .container
+-#    .navbar-header
+-#      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+-#        %span.sr-only Toggle navigation
+-#        %span.icon-bar
+-#        %span.icon-bar
+-#        %span.icon-bar
+-#      = link_to 'Home', root_path, class: 'navbar-brand'
+-#  %nav.collapse.navbar-collapse{:role=>'navigation'}
+-#      %ul.nav.navbar-nav
+-#        = render 'layouts/navigation_links'
+-#      .user.pull-right
+-#        = render 'layouts/user_widget'
+
+%header.masthead
   .container
-    .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      = link_to 'Home', root_path, class: 'navbar-brand'
-    %nav.collapse.navbar-collapse{:role=>'navigation'}
-      %ul.nav.navbar-nav
-        = render 'layouts/navigation_links'
-      .user.pull-right
-        = render 'layouts/user_widget'
+    .row
+      .col-md-6
+        %h1
+          =link_to 'Geront', root_path, :title => "Yo-ho-ho!"
+        %p.lead Yo-ho-ho! Bambi Power!
+      .col-md-6
+        .pull-right.hidden-sm
+          %h1
+            %i.glyphicon.glyphicon-user
+            = render 'layouts/user_widget'
