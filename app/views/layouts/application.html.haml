@@ -13,7 +13,9 @@
     .container
       .row.row-offcanvas.row-offcanvas-left
         = render 'layouts/sidebar'
-        = yield
+        .col-xs-12.col-sm-9
+          = render 'layouts/toggle_nav'
+          = yield
       %hr
-      = render 'layouts/footer'
+        = render 'layouts/footer'
 = debug(params) if  Rails.env.development?
