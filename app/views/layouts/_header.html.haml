@@ -14,15 +14,19 @@
 -#      .user.pull-right
 -#        = render 'layouts/user_widget'
 
-%header.masthead
+.navbar.navbar-fixed-top.navbar-inverse{role: "navigation"}
   .container
-    .row
-      .col-md-6
-        %h1
-          =link_to 'Geront', root_path, :title => "Yo-ho-ho!"
-        %p.lead Yo-ho-ho! Bambi Power!
-      .col-md-6
-        .pull-right.hidden-sm
-          %h1
-            %i.glyphicon.glyphicon-user
-            = render 'layouts/user_widget'
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{href: "#"} Project name
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li.active
+          =link_to 'Домой', root_path
+        %li
+          =link_to 'О нас', page_path('about')
+        %li
+          =link_to 'Партнеры', page_path('partners')

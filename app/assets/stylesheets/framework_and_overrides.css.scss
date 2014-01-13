@@ -37,39 +37,13 @@ main {
   background-color: #eee;
   padding-bottom: 80px;
   width: 100%;
-  margin-top: 151px; // accommodate the navbar
+  margin-top: 10px;// accommodate the navbar
   }
 section {
   @extend .row;
   margin-top: 20px;
   }
-
+style
 .dropdown:hover .dropdown-menu {
     display: block;
  }
-
-/* .navbar-form input, .form-inline input {
-  width:auto;
-}
-*/
-header {
-  height:270px;
-}
-
-@media (min-width: 979px) {
-  #sidebar.affix-top {
-    position: static;
-    margin-top:25px;
-    width:228px;
-  }
-  
-  #sidebar.affix {
-    position: fixed;
-    top:25px;
-    width:228px;
-  }
-}
-
-.affix,.affix-top {
-   position:static;
-}

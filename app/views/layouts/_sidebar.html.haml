@@ -1,3 +1,11 @@
-.col-md-3
-  %ul.list-group#sidebar
-    = render 'layouts/navigation_links'
+#sidebar.col-xs-6.col-sm-3.sidebar-offcanvas{role: "navigation"}
+  %p.visible-xs
+    %button.btn.btn-primary.btn-xs{"data-toggle" => "offcanvas", type: "button"}
+      %i.glyphicon.glyphicon-chevron-left
+  .well.sidebar-nav
+    %ul.nav
+      %li Sidebar
+      %li.active
+        =link_to 'О нас', page_path('about')
+      %li
+        =link_to 'Партнеры', page_path('partners')

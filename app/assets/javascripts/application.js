@@ -15,8 +15,4 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
-$('#sidebar').affix({
-      offset: {
-        top: $('header').height()
-      }
-});	
+
