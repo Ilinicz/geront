@@ -9,12 +9,12 @@
     = csrf_meta_tags
   %body
     = render 'layouts/header'
-    .container
+    .container.wrap
       = render 'layouts/messages'
       .row.row-offcanvas.row-offcanvas-left
         = render 'layouts/sidebar'
+        = render 'layouts/toggle_nav'
         .col-xs-12.col-sm-9
-          = render 'layouts/toggle_nav'
           = yield
       %hr
         = render 'layouts/footer'
