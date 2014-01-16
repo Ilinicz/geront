@@ -1,0 +1,13 @@
+%h2
+  Изменить данные #{@user.email.to_s.humanize}
+= bootstrap_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+  = f.email_field :email, label: "Новый почтовый адрес", :help => "Введите новый почтовый адрес вместо старого"
+  = f.password_field :password, label: "Ваш новый пароль", :help => "Оставьте поле пустым, если не хотите менять пароль"
+  = f.password_field :password_confirmation, label: "Подтвердите новый пароль", :help => "Оставьте поле пустым, если не хотите менять пароль"
+  = f.password_field :current_password, label: "Ваш текущий пароль", :help => "Введите ваш текущий пароль"
+  = f.submit "Сохранить!", :class=>'btn btn-success'
+%hr
+%h3 Удалить аккаунт (без администратора не делать!)
+%p
+  Что-то пошло не так: #{link_to "Удалить аккаунт", registration_path(resource_name), :data => { :confirm => "Вы уверены?" }, :method => :delete}
+
