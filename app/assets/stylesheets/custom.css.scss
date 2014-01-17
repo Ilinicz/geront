@@ -5,8 +5,12 @@
 
 @import "bootstrap";
 
+.geront-header img {
+  width: 100%;
+}
+
 body {
-  padding-top: 70px;
+  /*padding-top: 70px;*/
   height: 100%;
   display: block;
 }
@@ -60,6 +64,6 @@ footer {
   position: fixed;
   width: 20%;
 }
-
-
 */
+
+

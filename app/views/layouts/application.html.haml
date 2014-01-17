@@ -8,6 +8,8 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
+    .geront-header
+      = image_tag ('pens3.jpg')
     = render 'layouts/header'
     .container.wrap
       = render 'layouts/messages'
