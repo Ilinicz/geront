@@ -1,21 +1,12 @@
-= form_for :post, url: posts_path do |f|
+- content_for :title do 
+  Добавление новости
+= bootstrap_form_for :post, url: posts_path do |f|
   - if @post.errors.any?
     #error_explanation
-      %h2
-        = pluralize(@post.errors.count, "error")
-        prohibited
-        this post from being saved:
-      %ul
-        - @post.errors.full_messages.each do |msg|
-          %li= msg
-  %p
-    = f.label :title
-    %br/
-    = f.text_field :title
-  %p
-    = f.label :content
-    %br/
-    = f.text_area :content
-  %p
-    = f.submit
-= link_to 'Back', posts_path
+      %h3
+        Поля "Название новости" и "Текст новости" обязательны для заполения!
+  = f.text_field :title, label: "Название новости"
+  = f.text_field :date, label: "Дата создания новости или события", help: "Опционально"
+  = f.text_area :content, label: "Текст новости", :rows=>'30'
+  = f.submit "Создать новость", :class=>"btn btn-success"  
+  = link_to 'Вернуться назад', :back, :data => { :confirm => "Вернуться назад, не сохраняя новость?" }, :class=>'btn btn-warning pull-right'

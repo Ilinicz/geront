@@ -1,6 +1,28 @@
-%p
-  %strong Title:
+- content_for :title do
   = @post.title
-%p
-  %strong Text:
-  = @post.content
+%h1= @post.title
+.row
+  .col-6.col-sm-6.col-lg-10
+    %h4= @post.date
+    %p
+      = @post.content
+    %hr
+  - if user_signed_in?
+    .col-2.col-sm-2.col-lg-2.vr-left
+      %p.pull-left
+        = link_to 'Редактировать', edit_post_path(@post), :class=>'btn btn-warning'
+      %p.pull-left
+        = link_to 'Удалить запись', post_path(@post), method: :delete, :data => { :confirm => "Удалить запись?" }, :class=>'btn btn-sm btn-danger'      
+
+%h5= link_to 'Другие новости', posts_path
+.row
+  - @posts.each do |post|
+    .col-4.col-sm-4.col-lg-4.vr-left
+      %h4= link_to post.title, post_path(post)
+      %h5= post.date
+      %p= first_ten(post.content)
+      %p
+      = link_to 'Читать »', post_path(post), :class=>'btn btn-xs btn-default'
+      
+
+

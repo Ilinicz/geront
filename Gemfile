@@ -14,6 +14,8 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'bootstrap_form'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 gem 'devise'
 group :development do
   gem 'better_errors'

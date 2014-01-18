@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 	end
 
 	def index
-		@posts = Post.all
+		@posts = Post.paginate(page: params[:page])
 	end
 
 	def create
@@ -22,6 +22,7 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
+		@posts = Post.all.sample(3)
 	end
 
 	def edit
@@ -47,6 +48,6 @@ class PostsController < ApplicationController
 	private
 
 	  def post_params
-	      params.require(:post).permit(:title, :content)
+	      params.require(:post).permit(:title, :date, :content)
 	  end
 end

@@ -1,22 +1,13 @@
-%h1 Editing post
-= form_for :post, url: post_path(@post), method: :patch do |f|
+- content_for :title do 
+  Редактирование новости
+= bootstrap_form_for @post, url: post_path(@post), method: :patch do |f|
   - if @post.errors.any?
     #error_explanation
-      %h2
-        = pluralize(@post.errors.count, "error")
-        prohibited
-        this post from being saved:
-      %ul
-        - @post.errors.full_messages.each do |msg|
-          %li= msg
-  %p
-    = f.label :title
-    %br/
-    = f.text_field :title
-  %p
-    = f.label :content
-    %br/
-    = f.text_area :content
-  %p
-    = f.submit
-= link_to 'Back', posts_path
+      %h3
+        Поля "Название новости" и "Текст новости" обязательны для заполения!
+  = f.text_field :title, label: "Изменить название новости"
+  = f.text_field :date, label: "Изменить дату создания новости или события", help: "Опционально"
+  = f.text_area :content, label: "Изменить текст новости", :rows=>'30'
+  = f.submit "Сохранить изменения", :class=>"btn btn-success"  
+
+  = link_to 'Вернуться назад', :back, :data => { :confirm => "Вернуться назад, не сохраняя изменений?" }, :class=>'btn btn-warning pull-right'
