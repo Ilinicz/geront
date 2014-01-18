@@ -65,8 +65,10 @@ footer {
 
 .affix {
    width: 20.2%;
+   position: fixed;
 }
 .affix-top {
+  position: static;
 }
 
 
