@@ -48,7 +48,7 @@ footer {
 
   .row-offcanvas-left.active {
     left: 70%;
-    z-index: 1020;
+    z-index: 1;
   }
 
   .sidebar-offcanvas {
@@ -78,5 +78,5 @@ footer {
 }
 .toggle_nav {
   position: fixed;
-  z-index: 1030;
+  z-index: 1;
 }
