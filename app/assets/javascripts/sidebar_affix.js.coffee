@@ -1,3 +1,3 @@
-#$(document).on "page:change", ->
-#  $(".sidebar-nav").affix offset:
-#    top: $("header").height()
+$(document).on "page:change", ->
+  $("#affix").affix offset:
+    top: $("header").height()
