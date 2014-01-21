@@ -1,32 +1,13 @@
--# navigation styled for Bootstrap 3.0
--#%header.navbar.navbar-default.navbar-fixed-top{:role=>'banner'}
--#  .container
--#    .navbar-header
--#      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
--#        %span.sr-only Toggle navigation
--#        %span.icon-bar
--#        %span.icon-bar
--#        %span.icon-bar
--#      = link_to 'Home', root_path, class: 'navbar-brand'
--#  %nav.collapse.navbar-collapse{:role=>'navigation'}
--#      %ul.nav.navbar-nav
--#        = render 'layouts/navigation_links'
--#      .user.pull-right
--#        = render 'layouts/user_widget'
-
-%header.navbar.navbar-fixed-top.navbar-inverse{role: "navigation"}
+%header.masthead
   .container
-    .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{href: root_path} Geront
-    .collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        %li
-          =link_to 'Домой', root_path
-        %li
-          =link_to 'О нас', page_path('about')
-        %li
-          =link_to 'Партнеры', page_path('partners')
+    .row
+      .col-sm-6
+        %h1
+          %a{href: "#", title: "scroll down for your viewing pleasure"} Bootstrap 3 Layout Template
+        %p.lead Big Top Header and Fixed Sidebar
+      .col-sm-6
+        .pull-right.hidden-sm
+          %h1
+            %a{href: "#"}
+              %i.glyphicon.glyphicon-user
+              %i.glyphicon.glyphicon-chevron-down

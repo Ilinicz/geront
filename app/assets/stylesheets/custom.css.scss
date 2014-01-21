@@ -15,73 +15,62 @@ img {
   max-width: 100%;
 }
 
-body {
-  padding-top: 100px;
-  height: 100%;
-  display: block;
-}
 .wrap {
   min-height: 100%;
   height: auto !important;
-  top: -48px;
+  position: static;
 }
+
 footer {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/*
- * Off Canvas
- * --------------------------------------------------
- */
-@media screen and (max-width: 768px) {
-  .navbar-fixed-top {
-    position: absolute;
+
+@media (min-width: 768px) {
+  .navbar-collapse {
+    height: auto;
+    border-top: 0;
+    box-shadow: none;
+    max-height: none;
+    padding-left:0;
+    padding-right:0;
+  }
+  .navbar-collapse.collapse {
+    display: block !important;
+    width: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .navbar-collapse.in {
+    overflow-x: visible;
   }
 
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all 0.25s ease-out;
-    -moz-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
-  }
+.navbar
+{
+  max-width: 300px;
+  width: 80%;
+  margin-right: 0;
+  margin-left: 0;
+} 
 
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -70%;
+.navbar-nav,
+.navbar-nav > li,
+.navbar-left,
+.navbar-right,
+.navbar-header
+{float:none !important;}
 
-  }
-
-  .row-offcanvas-left.active {
-    left: 70%;
-    z-index: 1;
-  }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0%;
-    margin-left: 12px;
-    width: 70%;
-  }
-
-  img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-  }
+.navbar-right .dropdown-menu {left:0;right:auto;}
+.navbar-collapse .navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+}
 }
 
 
 /*______fixed-sidebar_______*/
 
 
-.affix {
-   width: 20.2%;
-   position: fixed;
-}
-.affix-top {
-  position: static;
-}
 
 
 .vr-left {
@@ -90,7 +79,19 @@ footer {
 .vr-right {
   border-right: 1px solid #eeeeee;
 }
-.toggle_nav {
-  position: fixed;
-  z-index: 1;
+
+
+
+
+
+header {
+  height:10%;
 }
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    z-index:10;
+    width: 80%;
+}
+

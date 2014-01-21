@@ -1,15 +1,2 @@
-#sidebar.col-xs-6.col-sm-3.sidebar-offcanvas{role: "navigation"}
-  .sidebar-nav#affix
-    .nav.list-group
-      =link_to 'О нас', page_path('about'), :class=>'list-group-item'
-      =link_to 'Партнеры', page_path('partners'), :class=>'list-group-item'
-      =link_to 'Наши новости новости новости', posts_path, :class=>'list-group-item'
-      =link_to 'Bombo', posts_path, :class=>'list-group-item'
-      =link_to 'Медицинское обслуживание и возможности', posts_path, :class=>'list-group-item'
-      =link_to 'Порядок приема и размещения', posts_path, :class=>'list-group-item'
-      =link_to 'Условия проживания и питания', posts_path, :class=>'list-group-item'
-      =link_to 'Вакансии', posts_path, :class=>'list-group-item'
-      =link_to 'Контакты', posts_path, :class=>'list-group-item'
-      - if user_signed_in?
-        = link_to 'Добавить новость', new_post_path, :class=>'btn btn-success'
-      
+.col-xs-3.col-sm-3.col-lg-3
+ %p LALALA
