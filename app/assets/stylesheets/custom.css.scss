@@ -6,7 +6,13 @@
 @import "bootstrap";
 
 .geront-header img {
-  width: 100%;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 body {
@@ -56,6 +62,12 @@ footer {
     top: 0%;
     margin-left: 12px;
     width: 70%;
+  }
+
+  img {
+  display: block;
+  height: auto;
+  max-width: 100%;
   }
 }
 

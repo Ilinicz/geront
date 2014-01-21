@@ -4,9 +4,9 @@ module PostsHelper
     "#{arr[0...10].join(' ')}..."
   end
 
-  def first_100(post)
+  def first_50(post)
     arr = post.split(' ')
-    "#{arr[0...100].join(' ')}..."
+    "#{arr[0...50].join(' ')}..."
   end
 
 end

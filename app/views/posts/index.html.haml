@@ -7,7 +7,7 @@
     - @posts.each do |post|
       %h2= link_to post.title, post_path(post)
       %h4= post.date
-      %p= first_100(post.content)
+      %p= first_50(post.content).html_safe 
       - if user_signed_in?
         %p.pull-right
           = link_to 'Редактировать', edit_post_path(post), :class=>'btn btn-warning'
