@@ -1,31 +1,33 @@
 - content_for :title do
   = @post.title
-%h1
-  = @post.title
-.row
-  .col-9.col-xs-9.col-md-9.col-lg-9
-    %h4
-      = @post.date
-    %p
-      = @post.content.html_safe
-    %hr/
+.jumbotron
+  %h3
+    = @post.title
+    %br
+    %small= @post.date
+.post_area
   - if user_signed_in?
-    .col-2.col-xs-2.col-sm-2.col-lg-2.vr-left
-      %p.pull-left
-        = link_to 'Редактировать', edit_post_path(@post), :class=>'btn btn-sm btn-warning'
-      %p.pull-left
-        = link_to 'Удалить запись', post_path(@post), method: :delete, :data => { :confirm => "Удалить запись?" }, :class=>'btn btn-xs btn-danger'
-%h5
-  = link_to 'Другие новости', posts_path
+    .col-xs-12.col-sm-12.col-md-10.col-lg-10
+      %p= @post.content.html_safe
+
+    .col-xs-12.col-sm-12.col-md-2.col-lg-2
+      %p= link_to 'Редактировать', edit_post_path(@post), :class=>'btn btn-sm btn-warning'
+      %p= link_to 'Удалить запись', post_path(@post), method: :delete, :data => { :confirm => "Удалить запись?" }, :class=>'btn btn-xs btn-danger'
+  - else
+    .col-lg-12
+      %p= @post.content.html_safe
+  
 .row
-  - @posts.each do |post|
-    .col-4.col-sm-4.col-lg-4.vr-left
-      .post_small
-        %h4
-          = link_to post.title, post_path(post)
-        %h5
-          = post.date
-        %p
-          = strip_tags(first_ten(post.content)).html_safe
-        %p
-        = link_to 'Читать »', post_path(post), :class=>'btn btn-xs btn-default'
+%hr  
+  %h5= link_to 'Другие новости', posts_path
+  %ul.list-group
+    - @posts.each do |post|
+      .col-xs-12.col-sm-12.col-md-4.col-lg-4
+        %li.post_small.list-group-item
+          %h4
+            = link_to post.title, post_path(post)
+            %br
+            %small= post.date
+          %p= strip_tags(first_ten(post.content)).html_safe
+          %p= link_to 'Читать »', post_path(post), :class=>'btn btn-xs btn-default'
+        

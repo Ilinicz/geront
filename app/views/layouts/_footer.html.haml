@@ -1,3 +1,11 @@
 %footer
-  %p © Company 2013
-  = render 'layouts/user_widget'
+  .row
+    .col-lg-4
+      %p © Company 2013
+    .col-lg-4
+      %ul.list-group.text-center
+        %li.list-group-item раз
+        %li.list-group-item два
+        %li.list-group-item три
+    .col-lg-4
+      %p.pull-right= render 'layouts/user_widget'

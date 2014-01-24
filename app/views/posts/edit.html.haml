@@ -1,13 +1,14 @@
 - content_for :title do 
   Редактирование новости
-= simple_form_for @post, url: post_path(@post), method: :patch do |f|
-  - if @post.errors.any?
-    #error_explanation
-      %h3
-        Поля "Название новости" и "Текст новости" обязательны для заполения!
-  = f.input :title, label: "Изменить название новости", required: false
-  = f.input :date, label: "Изменить дату создания новости или события", hint: "Опционально", required: false
-  = f.input :content, as: :bootsy, label: "Изменить текст новости", :input_html => {:rows => 40}, required: false
-  = f.button :submit, "Сохранить изменения", :class=>"btn btn-success"  
+.col-xs-12.col-sm-12.col-md-12.col-lg-12
+  = simple_form_for @post, url: post_path(@post), method: :patch do |f|
+    - if @post.errors.any?
+      #error_explanation
+        %h3
+          Поля "Название новости" и "Текст новости" обязательны для заполения!
+    = f.input :title, label: "Изменить название новости", required: false
+    = f.input :date, label: "Изменить дату создания новости или события", hint: "Опционально", required: false
+    = f.input :content, as: :bootsy, label: "Изменить текст новости", :input_html => {:rows => 40}, required: false
+    = f.button :submit, "Сохранить изменения", :class=>"btn btn-success"  
 
-  = link_to 'Вернуться назад', :back, :data => { :confirm => "Вернуться назад, не сохраняя изменений?" }, :class=>'btn btn-warning pull-right'
+    = link_to 'Вернуться назад', :back, :data => { :confirm => "Вернуться назад, не сохраняя изменений?" }, :class=>'btn btn-warning pull-right'
