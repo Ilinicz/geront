@@ -1,18 +1,20 @@
 - content_for :title do
   Новости
-.jumbotron.text-center Новости
 
-%ul.list-group
-  - @posts.each do |post|
-    %li.list-group-item
-      %h2= link_to post.title, post_path(post)
-      %h4= post.date
-      %p= first_50(post.content).html_safe 
-      - if user_signed_in?
-        %p.pull-right
-          = link_to 'Редактировать', edit_post_path(post), :class=>'btn btn-sm btn-warning'
-          = link_to 'Удалить запись', post_path(post), method: :delete, :data => { :confirm => "Удалить запись?" }, :class=>'btn btn-xs btn-danger'
+.col-xs-12.col-sm-12.col-md-12.col-lg-11
+  %h1.page-header.text-center.well Новости
 
-      %p
-      = link_to 'Читать »', post_path(post), :class=>'btn btn-default'
+  %ul.list-group
+    - @posts.each do |post|
+      %li.list-group-item
+        %h2= link_to post.title, post_path(post)
+        %h4= post.date
+        %p= first_50(post.content).html_safe 
+        - if user_signed_in?
+          %p.pull-right
+            = link_to 'Редактировать', edit_post_path(post), :class=>'btn btn-sm btn-warning'
+            = link_to 'Удалить запись', post_path(post), method: :delete, :data => { :confirm => "Удалить запись?" }, :class=>'btn btn-xs btn-danger'
+
+        %p
+        = link_to 'Читать »', post_path(post), :class=>'btn btn-default'
 = will_paginate

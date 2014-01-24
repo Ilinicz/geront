@@ -1,0 +1,29 @@
+- provide :title do
+  Медицинское обслуживание
+
+.col-xs-12.col-sm-12.col-md-12.col-lg-11
+  %ul.nav.nav-pills
+    %li
+      = link_to placement_path do
+        Порядок приема 
+        %br
+        и размещения
+        %span.glyphicon.glyphicon-arrow-down
+    %li
+      = link_to accommodation_path do
+        Условия проживания
+        %br 
+        и питания
+        %span.glyphicon.glyphicon-arrow-down
+    %li.active
+      = link_to medservice_path do
+        Медицинское обслуживание
+        %br
+        и реабилитация
+        %span.glyphicon.glyphicon-arrow-down
+
+
+  %h1.page-header.text-center.well Медицинское обслуживание и реабилитационные возможности
+
+  %p
+    Тут Текст
