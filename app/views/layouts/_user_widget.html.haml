@@ -3,7 +3,7 @@
     #{current_user.email}
     =link_to 'Выход', destroy_user_session_path, :method => :delete
 - else
-  %a.pull-right{"data-toggle" => "modal", href: "#myModal"} Вход
+  %a.pull-right.small{"data-toggle" => "modal", href: "#myModal"} Вход
   #myModal.modal
     .modal-dialog
       .modal-content

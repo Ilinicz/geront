@@ -1,13 +1,116 @@
 // import the CSS framework
-//@import "bootstrap";
+@import "bootstrap";
 
-// make all images responsive by default
-//img {
-//  @extend .img-responsive;
-//  margin: 0 auto;
-//  }
-// override for the 'Home' navigation link
-//.navbar-brand {
-//  font-size: inherit;
-//  }
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+}
 
+
+/*_______MEDIA__NAVBAR_SM_MD_LG___*/
+
+@media (min-width: $screen-sm-min) {
+  .navbar-collapse {
+    height: auto;
+    border-top: 0;
+    box-shadow: none;
+    max-height: none;
+    padding-left:0;
+    padding-right:0;
+  }
+  .navbar-collapse.collapse {
+    display: block !important;
+    width: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .navbar-collapse.in {
+    overflow-x: visible;
+  }
+
+  .navbar {
+    max-width: 300px;
+    width: auto;
+    margin-right: 0;
+    margin-left: 0;
+    top: 0%;
+  } 
+
+
+  .navbar-fixed-top {
+    position: static;
+  }
+
+  .navbar-nav,
+  .navbar-nav > li,
+  .navbar-left,
+  .navbar-right,
+  .navbar-header
+  {float:none !important;}
+
+  .navbar-right .dropdown-menu {left:0;right:auto;}
+  .navbar-collapse .navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+  }
+
+
+}
+
+
+@media (min-width: $screen-md-min) { 
+
+  .navbar-fixed-top {
+    position: static;
+  }
+
+
+
+  .navbar {
+    max-width: 300px;
+    width: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    top: 0%;
+  }   
+}
+
+@media (min-width: $screen-lg-min) { 
+
+  .navbar-fixed-top {
+    position: static;
+  }
+
+  .navbar {
+    max-width: 300px;
+    width: auto;
+    margin-right: 0;
+    margin-left: 0;
+    top: 0%;
+  }   
+}
+
+/*_________INTRO_HEADER______*/
+
+@media (max-width: $screen-sm-max) {
+  .intro-message {
+    padding-bottom: 15%;
+  }
+
+  .intro-message > h1 {
+    font-size: 3em;
+  }
+
+  ul.intro-buttons > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  ul.intro-buttons > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .intro-divider {
+    width: 100%;
+  }
+}

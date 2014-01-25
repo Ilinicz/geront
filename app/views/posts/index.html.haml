@@ -1,7 +1,6 @@
 - content_for :title do
   Новости
-
-.col-xs-12.col-sm-12.col-md-12.col-lg-11
+.col-xs-12.col-sm-12.col-md-12.col-lg-12
   %h1.page-header.text-center.well Новости
 
   %ul.list-group
@@ -17,4 +16,4 @@
 
         %p
         = link_to 'Читать »', post_path(post), :class=>'btn btn-default'
-= will_paginate
+  = will_paginate

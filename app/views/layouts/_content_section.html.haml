@@ -1,0 +1,8 @@
+.content-section#content-section
+  .container
+    .row
+      .col-lg-3.col-sm-3
+        = render 'layouts/navigation'
+      .col-lg-9.col-sm-9
+        = render 'layouts/messages'
+        = yield

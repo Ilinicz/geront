@@ -1,4 +1,4 @@
-%nav#nav.navbar.navbar-default.navbar-fixed-top{role: "navigation"}
+%nav.navbar.navbar-default.navbar-fixed-top{role: "navigation"}
   / Brand and toggle get grouped for better mobile display
   .navbar-header
     %button.navbar-toggle{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", type: "button"}
@@ -25,7 +25,9 @@
       %li= link_to 'Наши партнеры', partners_path
       %li= link_to 'Контакты и схема проезда', contacts_path 
       -if user_signed_in?
-        = link_to 'Добавить новость', new_post_path, :class=>'btn btn-md btn-success'   
+        %hr
+        %li
+          = link_to 'Добавить новость', new_post_path
 -#      %li.dropdown
         %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
           Dropdown
