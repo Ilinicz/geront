@@ -8,11 +8,7 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    = render 'layouts/header'
-    - if params[:controller]=='visitors'
-      = render 'layouts/intro_header'
+    #wrapper.active
+      = render 'layouts/sidebar_nav'
+      = render 'layouts/page_content'
 
-    = render 'layouts/content_section'    
-
-    = render 'layouts/footer'
-= debug(params) if  Rails.env.development?

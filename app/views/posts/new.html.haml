@@ -1,5 +1,6 @@
 - content_for :title do 
   Добавление новости
+
 = simple_form_for @post, url: posts_path do |f|
   - if @post.errors.any?
     #error_explanation
@@ -8,6 +9,7 @@
   = f.input :title, label: "Название новости", required: false
   = f.input :date, label: "Дата создания новости или события", hint: "Опционально", required: false
   = f.input :content, as: :bootsy, label: "Текст новости", :input_html => {:rows => 40}, required: false
-  = f.button :submit, "Создать новость", :class=>"btn btn-success"  
-
-  = link_to 'Вернуться назад', :back, :data => { :confirm => "Вернуться назад, не сохраняя новость?" }, :class=>'btn btn-warning pull-right'
+  .ui-group-buttons.pull-right
+    = f.button :submit, "Создать новость", :class=>"btn btn-success bui"  
+    .or
+    = link_to 'Вернуться назад', :back, :data => { :confirm => "Вернуться назад, не сохраняя новость?" }, :class=>'btn btn-warning bui'

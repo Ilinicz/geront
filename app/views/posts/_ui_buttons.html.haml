@@ -1,0 +1,6 @@
+.pull-right
+  .ui-group-buttons
+    = link_to 'Редактировать', edit_post_path(post), :class=>'btn btn-warning btn-sm bui', type:'button'
+    .or.or-sm
+    = link_to post_path(post), method: :delete, :data=>{:confirm=>'Удалить запись?'}, :class=>'btn btn-danger btn-sm bui' do
+      %span.glyphicon.glyphicon-trash

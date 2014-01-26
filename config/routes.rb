@@ -11,5 +11,5 @@ Geront::Application.routes.draw do
   get '/accommodation' => 'high_voltage/pages#show', :id => 'accommodation'
   get '/placement' => 'high_voltage/pages#show', :id => 'placement'
   get '/medservice' => 'high_voltage/pages#show', :id => 'medservice'
-  
+  get '/information' => 'high_voltage/pages#show', :id => 'information'
 end
