@@ -1,8 +1,10 @@
-- provide :title do
+= provide :title do
   Прием и размещение
 
 
-.col-xs-12.col-sm-12.col-md-9.col-lg-10
+.center
+
+
   %h1.page-header.text-center.well Порядок приема и размещения
 
   %p 
@@ -77,38 +79,3 @@
   %p.lead
     При не предоставлении одного из вышеперечисленных документов, кандидатура пенсионера на предоставление путевки в  ФГБУ «Всероссийский научно-методический геронтологический центр», рассматриваться не будет. Прием граждан на постоянное или временное проживание в ФГБУ «Всероссийский научно-методический геронтологический центр»  проводится по решению социально-медицинской комиссии Центра. День поступления в Геронтологический центр: вторник с 9.00 до 13.00 часов.
     %hr
-
-.col-md-3.col-lg-2.hidden-xs.hidden-sm
-  %ul.nav.nav-pills.nav-stacked#nav
-    %li.active
-      = link_to placement_path do
-        Порядок приема 
-        %br
-        и размещения
-        %br
-        %span.glyphicon.glyphicon-arrow-left
-    %li
-      = link_to accommodation_path do
-        Условия проживания
-        %br 
-        и питания
-        %br
-        %span.glyphicon.glyphicon-arrow-left
-    %li
-      = link_to medservice_path do
-        Медицинское обслуживание
-        %br
-        и реабилитация
-        %br
-        %span.glyphicon.glyphicon-arrow-left
-
-.col-xs-12.col-sm-12.hidden-md.hidden-lg
-  %ul.nav.nav-pills
-    %li
-      = link_to root_path do
-        %span.glyphicon.glyphicon-home
-        Домой
-    %li.pull-right
-      = link_to accommodation_path do
-        Далее
-        %span.glyphicon.glyphicon-arrow-right

@@ -1,33 +1,34 @@
 - content_for :title do
   = @post.title
-.jumbotron
+.well
   %h3
     = @post.title
     %br
     %small= @post.date
 .post_area
   - if user_signed_in?
-    .col-xs-12.col-sm-12.col-md-10.col-lg-10
-      %p= @post.content.html_safe
 
-    .col-xs-12.col-sm-12.col-md-2.col-lg-2
-      %p= link_to 'Редактировать', edit_post_path(@post), :class=>'btn btn-sm btn-warning'
-      %p= link_to 'Удалить запись', post_path(@post), method: :delete, :data => { :confirm => "Удалить запись?" }, :class=>'btn btn-xs btn-danger'
+    = render 'posts/ui_buttons', :post => @post
+      
+
+    %p= @post.content.html_safe
+
+
+    = render 'posts/ui_buttons', :post => @post
   - else
-    .col-lg-12
-      %p= @post.content.html_safe
+
+    %p= @post.content.html_safe
   
 .row
 %hr  
   %h5= link_to 'Другие новости', posts_path
-  %ul.list-group
+  %ul.inline-block
     - @posts.each do |post|
-      .col-xs-12.col-sm-12.col-md-4.col-lg-4
-        %li.post_small.list-group-item
-          %h4
-            = link_to post.title, post_path(post)
-            %br
-            %small= post.date
-          %p= strip_tags(first_ten(post.content)).html_safe
-          %p= link_to 'Читать »', post_path(post), :class=>'btn btn-xs btn-default'
+      %li.post_small.list-group-item
+        %h4
+          = link_to post.title, post_path(post)
+          %br
+          %small= post.date
+        %p= strip_tags(first_ten(post.content)).html_safe
+        %p= link_to 'Читать »', post_path(post), :class=>'btn btn-xs btn-default'
         

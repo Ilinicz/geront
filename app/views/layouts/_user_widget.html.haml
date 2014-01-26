@@ -3,13 +3,14 @@
     #{current_user.email}
     =link_to 'Выход', destroy_user_session_path, :method => :delete
 - else
-  %a.pull-right.small{"data-toggle" => "modal", href: "#myModal"} Вход
-  #myModal.modal
+  %a.pull-right.small#openBtn{"data-toggle" => "modal", href: "#myModal"} Вход
+  #myModal.modal.fade.in
     .modal-dialog
       .modal-content
         .modal-header
-          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
-          %h4.modal-title LITTLE BAMBI BAMBI BAMBI!!111
+          %a.btn.btn-default{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} 
+            %span.glyphicon.glyphicon-remove
+          %h4.modal-title Вход на сайт
         .modal-body
           = bootstrap_form_for("user", :url => user_session_path) do |f|
             = f.email_field  :email, label: "Почтовый адрес"

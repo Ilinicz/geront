@@ -1,0 +1,29 @@
+%nav#sidebar-wrapper{role: "navigation"}
+  %ul#sidebar_menu.sidebar-nav
+    %li.sidebar-brand
+      %a#menu-toggle{href: "#"}
+        Меню
+        %span#main_icon.glyphicon.glyphicon-align-justify
+  %ul#sidebar.sidebar-nav
+    %li.home
+      = link_to root_path do
+        На главную
+        %span.sub_icon.glyphicon.glyphicon-home
+    %li
+      = link_to about_path do
+        О центре
+        %span.sub_icon.glyphicon.glyphicon-link
+    %li
+      = link_to posts_path do
+        Новости
+        %span.sub_icon.glyphicon.glyphicon-link
+    %li
+      = link_to 'Информация', information_path
+    %li= link_to 'Вакансии', vacancies_path
+    %li= link_to 'Партнеры', partners_path
+    %li= link_to 'Контакты', contacts_path 
+    -if user_signed_in?
+      %li.admin
+        = link_to 'Добавить новость', new_post_path
+      %li.admin
+        =link_to 'Выход', destroy_user_session_path, :method => :delete
