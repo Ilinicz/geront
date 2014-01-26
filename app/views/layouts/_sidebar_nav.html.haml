@@ -3,27 +3,42 @@
     %li.sidebar-brand
       %a#menu-toggle{href: "#"}
         Меню
-        %span#main_icon.glyphicon.glyphicon-align-justify
+        %span#main-icon.glyphicon.glyphicon-align-justify
   %ul#sidebar.sidebar-nav
     %li.home
       = link_to root_path do
         На главную
-        %span.sub_icon.glyphicon.glyphicon-home
+        %span.sub-icon.glyphicon.glyphicon-home
     %li
       = link_to about_path do
         О центре
-        %span.sub_icon.glyphicon.glyphicon-link
+        %span.sub-icon.glyphicon.glyphicon-flag
     %li
       = link_to posts_path do
         Новости
-        %span.sub_icon.glyphicon.glyphicon-link
+        %span.sub-icon.glyphicon.glyphicon-comment
     %li
-      = link_to 'Информация', information_path
-    %li= link_to 'Вакансии', vacancies_path
-    %li= link_to 'Партнеры', partners_path
-    %li= link_to 'Контакты', contacts_path 
+      = link_to information_path do
+        Информация
+        %span.sub-icon.glyphicon.glyphicon-exclamation-sign
+    %li
+      = link_to vacancies_path do
+        Вакансии
+        %span.sub-icon.glyphicon.glyphicon-paperclip
+    %li
+      = link_to partners_path do
+        Партнеры
+        %span.sub-icon.glyphicon.glyphicon-link
+    %li
+      = link_to contacts_path do
+        Контакты
+        %span.sub-icon.glyphicon.glyphicon-map-marker
     -if user_signed_in?
       %li.admin
-        = link_to 'Добавить новость', new_post_path
+        = link_to new_post_path do
+          Добавить новость
+        
       %li.admin
-        =link_to 'Выход', destroy_user_session_path, :method => :delete
+        =link_to destroy_user_session_path, :method => :delete do
+          Выход
+          

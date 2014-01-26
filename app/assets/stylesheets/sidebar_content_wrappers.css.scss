@@ -79,6 +79,9 @@
 .sidebar-nav > .admin {
     height: 75px;
     line-height: 75px;
+    .sub-icon {
+      padding-top:29px;
+    }
 }
 
 .sidebar-nav li a {
@@ -113,13 +116,13 @@
   background: none;
 }
 
-#main_icon
+#main-icon
 {
     float:right;
    padding-right: 65px;
    padding-top:20px;
 }
-.sub_icon
+.sub-icon
 {
     float:right;
    padding-right: 65px;
@@ -170,12 +173,18 @@
     transition: background .5s;
   }
 
-  #main_icon{
+
+  .sidebar-nav > .admin {
+      height: 40px;
+      line-height: 40px;
+  }
+
+  #main-icon{
     float:right;
     padding-right: 50px;
     padding-top:20px;
   }
-  .sub_icon {
+  .sub-icon {
     float:right;
     padding-right: 50px;
     padding-top:12px;
