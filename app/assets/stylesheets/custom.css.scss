@@ -6,14 +6,16 @@
 
 body, html {
   height: 100%;
-  width: 100%;
-  background: url(image_path('grey.png'))
+  width: 100%; 
+  background: rgba(34, 34, 34, 1);
 }
 
 body, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
+
+
 
 .lead {
   font-size: 18px;
@@ -22,14 +24,14 @@ body, h1, h2, h3, h4, h5, h6 {
 
 
 .content-section {
-  padding: 50px 0;
+  padding: 3% 2% 3% 2%;
 }
 
-footer {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 50px;
+.page-content {
+  height: 100%;
+  background-image: url(image_path('grey.png'));
 }
+
 
 
 .vr-left {
@@ -59,3 +61,4 @@ footer {
   position: static;
   width: 123%;
 }
+

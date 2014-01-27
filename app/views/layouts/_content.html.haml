@@ -1,0 +1,14 @@
+#content-wrapper
+  .page-content.inset
+  
+    - if params[:controller]=='visitors'
+      = render 'layouts/intro_header'
+   
+    .content-section{name: 'content-section'}
+      .row
+        = render 'layouts/messages'
+        = yield
+      
+    %hr
+    = render 'layouts/footer'
+ 

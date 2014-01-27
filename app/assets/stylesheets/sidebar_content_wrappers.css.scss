@@ -6,7 +6,8 @@
 #wrapper {
     padding-left: 70px;
     transition: all .4s ease 0s;
-    height: 100%
+    background: rgba(34, 34, 34, 1);
+    height: 100%;
 }
 
 #sidebar-wrapper {
@@ -28,9 +29,10 @@
     margin: 0;
     padding: 0;
 }
-#page-content-wrapper {
+#content-wrapper {
     padding-left: 0;
     margin-left: 0;
+    padding-right: 1.8%;
     width: 100%;
     height: auto;
 }
@@ -41,7 +43,7 @@
     left: 230px;
 }
 
-#page-content-wrapper {
+#content-wrapper {
   width: 100%;
 }
 
@@ -79,9 +81,6 @@
 .sidebar-nav > .admin {
     height: 75px;
     line-height: 75px;
-    .sub-icon {
-      padding-top:29px;
-    }
 }
 
 .sidebar-nav li a {
@@ -142,7 +141,7 @@
 
 @media (max-width:991px) {
   #wrapper {
-    padding-left: 40px;
+    padding-left: 50px;
     transition: all .4s ease 0s;
   }
   #sidebar-wrapper {
@@ -191,7 +190,7 @@
   }
 
   #wrapper.active {
-    padding-left: 40px;
+    padding-left: 50px;
   }
   #wrapper.active #sidebar-wrapper {
     left: 130px;

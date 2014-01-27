@@ -1,7 +1,6 @@
 .intro-header {
-  padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-  padding-bottom: 50px;
-  margin-top: -1px;
+  padding-top: 0; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 30%;
   color: #f8f8f8;
   background: url(image_path('blue.jpg')) no-repeat center center;
   background-size: cover;
@@ -10,8 +9,8 @@
 
 .intro-message {
   position: relative;
-  padding-top: 5%;
-  padding-bottom: 20%;
+  padding-top: 10%;
+  
 }
 
 .intro-message > h1 {
@@ -32,4 +31,28 @@
 
 .ghd {
   font-size: 25pt;
+}
+
+@media (max-width: 750) {
+  .intro-message {
+    padding-bottom: 15%;
+  }
+
+  .intro-message > h1 {
+    font-size: 3em;
+  }
+
+  ul.intro-buttons > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  ul.intro-buttons > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .intro-divider {
+    width: 100%;
+  }
 }
