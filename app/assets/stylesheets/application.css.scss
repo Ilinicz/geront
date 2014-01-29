@@ -9,6 +9,50 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require fonts.css.scss
  *= require bootsy
  *= require_tree .
  */
+
+@font-face {
+    font-family: 'GothaProReg';
+    src: url('/assets/GothaProReg.otf');
+    src: url('/assets/GothaProReg.otf?#iefix') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'GothaProBla';
+    src: url('/assets/GothaProBla.otf');
+    src: url('/assets/GothaProBla.otf?#iefix') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'GothaProMed';
+    src: url('/assets/GothaProMed.otf');
+    src: url('/assets/GothaProMed.otf?#iefix') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'GothaProLig';
+    src: url('/assets/GothaProLig.otf');
+    src: url('/assets/GothaProLig.otf?#iefix') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothaProNarMed';
+    src: url('/assets/GothaProNarMed.otf');
+    src: url('/assets/GothaProNarMed.otf?#iefix') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
