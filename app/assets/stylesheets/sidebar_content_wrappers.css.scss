@@ -4,8 +4,8 @@
 }
 
 #wrapper {
-    padding-left: 70px;
-    margin-right: 1.8%;
+    padding-left: 60px;
+    margin-right: 0;
     transition: all .4s ease 0s;
     height: 100%;
     width: auto;
@@ -13,7 +13,7 @@
 
 #sidebar-wrapper {
     margin-left: -210px;
-    left: 70px;
+    left: 60px;
     width: 210px;
     background: rgba(43, 25, 63, 1) /*rgba(34, 34, 34, 1)*/;
     position: fixed;
@@ -31,13 +31,15 @@
     margin: 0;
     padding: 0;
     text-align: right;
+    font-weight: 400;
 }
 #content-wrapper {
     padding-left: 0;
     margin-left: 0;
     width: auto;
     height: auto;
-    background: url(image_path('grey.png'));
+  /*background: url(image_path('billie.png'));*/
+
 }
 #wrapper.active {
     padding-left: 210px;
@@ -50,9 +52,9 @@
 #sidebar_menu li a, .sidebar-nav li a {
     color: #888;
     display: block;
-    float: left;
+    float: center;
     text-decoration: none;
-    width: 210px;
+    width: 190px;
     background: rgba(43, 25, 63, 1) /*rgba(37, 37, 37, 1)*/;
     /*border-top: 1px solid rgba(0, 58, 42, 1);
     border-bottom: 1px solid rgba(0, 38, 22, 1);*/
@@ -95,6 +97,7 @@
   color: #999;
   display: block;
   text-decoration: none;
+  
 }
 
 .sidebar-nav li a:hover {
@@ -126,10 +129,10 @@
 
 #main-icon
 {
-  float:right;
-   padding-right: 15px;
+   float:right;
+   padding-right: 0px;
    padding-top:20px;
-   padding-left: 16px;
+   padding-left: 27px;
 }
 .sub-icon
 {

@@ -4,7 +4,7 @@
     - if params[:controller]=='visitors'
       = render 'layouts/intro_header'
    
-    .content-section{name: 'content-section'}
+    .content-section
       .row
         = render 'layouts/messages'
         = yield

@@ -12,18 +12,26 @@ img {
 body, html {
   height: 100%;
   width: 100%; 
-  background: rgba(43, 25, 63, 1);
+  background: #fff;
+  font-family: 'Open Sans';
+  font-weight: 400;
   /*background-image: url(image_path('roses.jpg'));*/
 }
 
 
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Gotham';
+  font-family: 'Open Sans';
+  font-weight: 400;
   /*'Exo 2' "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  color: #3A3045;
 }
 
-.lead {
-  font-size: 19px;
-  font-weight: 200;
+.header-lead {
+  font-size: 45px;
+  font-weight: 300;
 }
 
+.jumbotron {
+  background-color: #fff;
+  /*background-image: url(image_path('stripes.png'));*/
+}

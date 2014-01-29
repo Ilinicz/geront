@@ -1,13 +1,17 @@
-.row.intro-header.hidden-xs
+.head-section.hidden-xs
+  .row.intro-header
+    .col-lg-2.col-md-offset-8.col-sm-offset-8
+      .head-arrow
+        =link_to '#section-about' do 
+          %span.glyphicon.glyphicon-arrow-down
+    .col-lg-10.col-lg-offset-1  
+      .intro-message.text-center
+        %h1
+          Всероссийский 
+          Научно-Методический 
+          %brГеронтологический Центр 
+        %h3
+          Федеральное государственное бюджетное  учреждение
+        %hr.intro-divider
+        %h3 ФГБУ "ВНМГЦ"
 
-  .col-lg-12
-    .intro-message
-      %h1.text-center
-        Всероссийский 
-        %br научно-методический геронтологический центр 
-      %h3.text-center Федеральное государственное бюджетное учреждение
-      %hr.intro-divider
-      %ul.list-inline.intro-buttons
-        %li
-          = link_to '#content-section', :class=>'btn btn-default btn-lg' do
-            %span.glyphicon.glyphicon-hand-down.ghd
