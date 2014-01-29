@@ -16,35 +16,35 @@
 
 @font-face {
     font-family: 'Gotham';
-    src: url('fonts/GothaProReg.otf');
-    src: url('fonts/GothaProReg.otf?#iefix') format('opentype');
-    font-weight: 400;
+    src: font-url('/assets/GothaProReg.otf');
+    src: font-url('/assets/GothaProReg.otf?#iefix') format('opentype');
+    font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
     font-family: 'Gotham';
-    src: url('fonts/GothaProBla.otf');
-    src: url('fonts/GothaProBla.otf?#iefix') format('opentype');
-    font-weight: 500;
+    src: font-url('/assets/GothaProBla.otf');
+    src: font-url('/assets/GothaProBla.otf?#iefix') format('opentype');
+    font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
     font-family: 'Gotham';
-    src: url('fonts/GothaProMed.otf');
-    src: url('fonts/GothaProMed.otf?#iefix') format('opentype');
-    font-weight: 300;
+    src: font-url('/assets/GothaProMed.otf');
+    src: font-url('/assets/GothaProMed.otf?#iefix') format('opentype');
+    font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
     font-family: 'Gotham';
-    src: url('fonts/GothaProLig.otf');
-    src: url('fonts/GothaProLig.otf?#iefix') format('opentype');
-    font-weight: 200;
+    src: font-url('/assets/GothaProLig.otf');
+    src: font-url('/assets/GothaProLig.otf?#iefix') format('opentype');
+    font-weight: normal;
     font-style: normal;
 }
