@@ -5,67 +5,74 @@
 
 #wrapper {
     padding-left: 70px;
+    margin-right: 1.8%;
     transition: all .4s ease 0s;
-    background: rgba(34, 34, 34, 1);
     height: 100%;
+    width: auto;
 }
 
 #sidebar-wrapper {
-    margin-left: -230px;
+    margin-left: -210px;
     left: 70px;
-    width: 230px;
-    background: rgba(34, 34, 34, 1);
+    width: 210px;
+    background: rgba(43, 25, 63, 1) /*rgba(34, 34, 34, 1)*/;
     position: fixed;
     height: 100%;
     z-index: 10000;
     transition: all .4s ease 0s;
+    /*border-right: 2px rgba(41, 23, 61, 0.1);*/
 }
 
 .sidebar-nav {
     display: block;
-    float: left;
-    width: 230px;
+    float: right;
+    width: 210px;
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: right;
 }
 #content-wrapper {
     padding-left: 0;
     margin-left: 0;
-    padding-right: 1.8%;
-    width: 100%;
+    width: auto;
     height: auto;
+    background: url(image_path('grey.png'));
 }
 #wrapper.active {
-    padding-left: 230px;
+    padding-left: 210px;
 }
 #wrapper.active #sidebar-wrapper {
-    left: 230px;
+    left: 210px;
 }
 
-#content-wrapper {
-  width: 100%;
-}
 
 #sidebar_menu li a, .sidebar-nav li a {
-    color: rgba(153, 153, 153, 1);
+    color: #888;
     display: block;
     float: left;
     text-decoration: none;
-    width: 230px;
-    background: rgba(37, 37, 37, 1);
-    border-top: 1px solid #373737;
-    border-bottom: 1px solid #1A1A1A;
+    width: 210px;
+    background: rgba(43, 25, 63, 1) /*rgba(37, 37, 37, 1)*/;
+    /*border-top: 1px solid rgba(0, 58, 42, 1);
+    border-bottom: 1px solid rgba(0, 38, 22, 1);*/
     -webkit-transition: background .5s;
     -moz-transition: background .5s;
     -o-transition: background .5s;
     -ms-transition: background .5s;
     transition: background .5s;
+    text-align: right;
 }
 .sidebar_name {
     padding-top: 25px;
     color: #fff;
     opacity: .7;
+}
+
+
+
+.menu-item {
+  margin-right: 40px;
 }
 
 .sidebar-nav li {
@@ -76,6 +83,7 @@
 .sidebar-nav > .home {
     height: 50px;
     line-height: 45px;
+    padding-bottom: 60px;
 }
 
 .sidebar-nav > .admin {
@@ -84,14 +92,14 @@
 }
 
 .sidebar-nav li a {
-  color: #999999;
+  color: #999;
   display: block;
   text-decoration: none;
 }
 
 .sidebar-nav li a:hover {
   color: #fff;
-  background: rgba(255,255,255,0.2);
+  /*background: rgba(0, 71, 56, 0.9);*/
   text-decoration: none;
 }
 
@@ -108,6 +116,7 @@
 
 .sidebar-nav > .sidebar-brand a {
   color: #999999;
+
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -117,14 +126,16 @@
 
 #main-icon
 {
-    float:right;
-   padding-right: 65px;
+  float:right;
+   padding-right: 15px;
    padding-top:20px;
+   padding-left: 16px;
 }
 .sub-icon
 {
-    float:right;
-   padding-right: 65px;
+   float:right;
+   
+   margin-right: 15px;
    padding-top:12px;
 }
 .content-header {
@@ -132,7 +143,7 @@
   line-height: 65px;
 }
 
-.content-header h1 {
+.content-header h1 h2 {
   margin: 0;
   margin-left: 20px;
   line-height: 65px;
@@ -141,7 +152,7 @@
 
 @media (max-width:991px) {
   #wrapper {
-    padding-left: 50px;
+    padding-left: 45px;
     transition: all .4s ease 0s;
   }
   #sidebar-wrapper {
@@ -157,14 +168,11 @@
     padding: 0;
   }
   #sidebar_menu li a, .sidebar-nav li a {
-    color: #999;
     display: block;
     float: left;
+    text-align: right;
     text-decoration: none;
     width: 200px;
-    background: #252525;
-    border-top: 1px solid #373737;
-    border-bottom: 1px solid #1A1A1A;
     -webkit-transition: background .5s;
     -moz-transition: background .5s;
     -o-transition: background .5s;
@@ -180,20 +188,22 @@
 
   #main-icon{
     float:right;
-    padding-right: 50px;
+    padding-right: 11px;
+    margin-right: 0px;
     padding-top:20px;
   }
   .sub-icon {
     float:right;
-    padding-right: 50px;
+    padding-right: 0px;
+    margin-right: -4px;
     padding-top:12px;
   }
 
   #wrapper.active {
-    padding-left: 50px;
+    padding-left: 45px;
   }
   #wrapper.active #sidebar-wrapper {
-    left: 130px;
+    left: 110px;
     width: 145px;
     transition: all .4s ease 0s;
   }

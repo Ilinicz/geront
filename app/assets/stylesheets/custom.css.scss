@@ -4,32 +4,14 @@
  */
 
 
-body, html {
-  height: 100%;
-  width: 100%; 
-  background: rgba(34, 34, 34, 1);
-}
-
-body, h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
-
-
-
-.lead {
-  font-size: 18px;
-  font-weight: 200;
-}
 
 
 .content-section {
-  padding: 3% 2% 3% 2%;
+  padding: 3% 2% 2% 2%;
 }
 
 .page-content {
   height: 100%;
-  background-image: url(image_path('grey.png'));
 }
 
 

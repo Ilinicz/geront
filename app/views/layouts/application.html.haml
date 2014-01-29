@@ -5,6 +5,7 @@
     %title= content_for?(:title) ? yield(:title) : 'Geront'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Geront'}"}
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = google_webfonts_init({google:['Istok+Web', 'Exo 2']})
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body

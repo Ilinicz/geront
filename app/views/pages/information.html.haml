@@ -1,16 +1,17 @@
 - provide :title do
   Информация
 .col-lg-12
-  %ul.nav.nav-pills#myTab{name:"up"}
+  %ul.nav.nav-tabs#myTab{name:"up"}
     %li.active
-      %a{"data-toggle" => "tab", href: "#tab1"} Порядок приема и размещения
+      %a{"data-toggle" => "tab", href: "#tab1"}  Условия проживания и питания
     %li
-      %a{"data-toggle" => "tab", href: "#tab2"} Условия проживания и питания
+      %a{"data-toggle" => "tab", href: "#tab2"} Порядок приема и размещения 
     %li
       %a{"data-toggle" => "tab", href: "#tab3"} Медицинское обслуживание
   
-  .tab-content
-    #tab1.tab-pane.fade.in.active= render 'pages/placement'
-    #tab2.tab-pane.fade= render 'pages/accommodation'
-    #tab3.tab-pane.fade= render 'pages/medservice' 
+.tab-content
+  #tab1.tab-pane.fade.in.active= render 'pages/accommodation'
+  #tab2.tab-pane.fade= render 'pages/placement'
+  #tab3.tab-pane.fade= render 'pages/medservice' 
+.col-lg-12  
   = link_to "Наверх", '#up', :class=>'btn btn-default btn-lg center-block'

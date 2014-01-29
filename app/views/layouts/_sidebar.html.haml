@@ -2,43 +2,51 @@
   %ul#sidebar_menu.sidebar-nav
     %li.sidebar-brand
       %a#menu-toggle{href: "#"}
-        Меню
-        %span#main-icon.glyphicon.glyphicon-align-justify
+        .menu-item
+          Меню
+          %span#main-icon.glyphicon.glyphicon-align-justify
   %ul#sidebar.sidebar-nav
     %li.home
       = link_to root_path do
-        На главную
-        %span.sub-icon.glyphicon.glyphicon-home
+        .menu-item 
+          На главную
+          %span.sub-icon.glyphicon.glyphicon-home.hidden-lg
     %li
       = link_to about_path do
-        О центре
-        %span.sub-icon.glyphicon.glyphicon-flag
+        .menu-item 
+          О центре
+          %span.sub-icon.glyphicon.glyphicon-flag.hidden-lg
     %li
       = link_to posts_path do
-        Новости
-        %span.sub-icon.glyphicon.glyphicon-comment
+        .menu-item 
+          Новости
+          %span.sub-icon.glyphicon.glyphicon-comment.hidden-lg
     %li
       = link_to information_path do
-        Информация
-        %span.sub-icon.glyphicon.glyphicon-exclamation-sign
+        .menu-item 
+          Информация
+          %span.sub-icon.glyphicon.glyphicon-exclamation-sign.hidden-lg
     %li
       = link_to vacancies_path do
-        Вакансии
-        %span.sub-icon.glyphicon.glyphicon-paperclip
+        .menu-item 
+          Вакансии
+          %span.sub-icon.glyphicon.glyphicon-paperclip.hidden-lg
     %li
       = link_to partners_path do
-        Партнеры
-        %span.sub-icon.glyphicon.glyphicon-link
-    %li
+        .menu-item 
+          Партнеры
+          %span.sub-icon.glyphicon.glyphicon-link.hidden-lg
       = link_to contacts_path do
-        Контакты
-        %span.sub-icon.glyphicon.glyphicon-map-marker
+        .menu-item 
+          Контакты
+          %span.sub-icon.glyphicon.glyphicon-map-marker.hidden-lg
     -if user_signed_in?
       %li.admin
         = link_to new_post_path do
-          Добавить новость
+          .menu-item 
+            Добавить новость
         
       %li.admin
         =link_to destroy_user_session_path, :method => :delete do
-          Выход
-          
+          .menu-item 
+            Выход
