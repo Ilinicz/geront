@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require font.scss
+ *= require fonts.scss
  *= require bootsy
  *= require_tree .
  */
