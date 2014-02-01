@@ -5,37 +5,46 @@
         .menu-item
           Меню
           %span#main-icon.glyphicon.glyphicon-align-justify
-  %ul#sidebar.sidebar-nav
+  %ul#sidebar.sidebar-nav.visitors-page
     %li.home
-      = link_to root_path do
+      = link_to root_path(anchor:"main") do
         .menu-item 
           На главную
           %span.sub-icon.glyphicon.glyphicon-home.hidden-lg.hidden-md
+
+  %ul#sidebar.sidebar-nav.ext-links   
     %li
       = link_to about_path do
-        .menu-item 
+        .menu-item
           О центре
-          %span.sub-icon.glyphicon.glyphicon-flag.hidden-lg.hidden-md
-    %li
-      = link_to posts_path do
-        .menu-item 
-          Новости
-          %span.sub-icon.glyphicon.glyphicon-comment.hidden-lg.hidden-md
+          .span.sub-icon.glyphicon.glyphicon-flag.hidden-lg.hidden-md
+
     %li
       = link_to information_path do
         .menu-item 
           Информация
           %span.sub-icon.glyphicon.glyphicon-exclamation-sign.hidden-lg.hidden-md
+
+    %li
+      = link_to posts_path do
+        .menu-item 
+          Новости
+          %span.sub-icon.glyphicon.glyphicon-comment.hidden-lg.hidden-md
+
+
     %li
       = link_to vacancies_path do
         .menu-item 
           Вакансии
           %span.sub-icon.glyphicon.glyphicon-paperclip.hidden-lg.hidden-md
+
     %li
       = link_to partners_path do
         .menu-item 
           Партнеры
           %span.sub-icon.glyphicon.glyphicon-link.hidden-lg.hidden-md
+
+    %li      
       = link_to contacts_path do
         .menu-item 
           Контакты

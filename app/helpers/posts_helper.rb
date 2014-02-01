@@ -1,5 +1,5 @@
 module PostsHelper
-  def first_ten(post)
+  def first_10(post)
     arr = post.split(' ')
     "#{arr[0...10].join(' ')}..."
   end
@@ -9,4 +9,8 @@ module PostsHelper
     "#{arr[0...50].join(' ')}..."
   end
 
+   def first_20(post)
+    arr = post.split(' ')
+    "#{arr[0...20].join(' ')}..."
+  end
 end

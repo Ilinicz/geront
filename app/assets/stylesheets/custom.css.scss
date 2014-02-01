@@ -46,36 +46,7 @@
   width: 123%;
 }
 
-/*Section-About*/
-.section-about {
-  background: #fafaf6; /*url(image_path('grey.png'));*/
-  padding: 2% 2% 2% 2%;
-  border-bottom: 60px solid #695065;
-}
-.about {
-  max-width: 295px;
-  max-height: 200px;
-  margin-top: 5%;
-}
 
-/*Section-Mission*/
-.section-mission {
-  background: url(image_path('back.png'));
-  padding: 2% 2% 2% 2%;
-  border-bottom: 60px solid #677222;
-}
+.nav-pills {
 
-.mission {
-  max-width: 350px;
-  max-height: 250px;
-  margin-top: 10%;
-}
-
-.arrow {
-  margin-top: -27px;
-  font-size: 50px;
-  
-  a{
-    color: rgba(43, 25, 63, 0.8);
-  }
 }

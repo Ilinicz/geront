@@ -1,23 +1,13 @@
 - content_for :title do 
-  О нас
-.jumbotron
-  %h1 Валала ай ками!
-  %p Парой слов о нас: 666, диалектика, логика, бамби. А дальше опять бесполезный текст.
-.row
-  .col-6.col-sm-6.col-lg-10
-    %h2 Оглавление текст тест шрифта
-    %p Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript.
-    %p
-      %a.btn.btn-default{href: "#"} View details »
-    / /span
-  .col-6.col-sm-6.col-lg-10
-    %h2 Heading
-    %p Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript. Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design.
-    %p
-      %a.btn.btn-default{href: "#"} View details »
-    / /span
-  .col-6.col-sm-6.col-lg-10
-    %h2 Heading
-    %p Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript. Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design.
-    %p
-      %a.btn.btn-default{href: "#"} View details »  
+  О центре
+
+%section.section-about#about
+  .row
+    = render 'pages/section_about'  
+
+%section.section-mission#mission
+  .row
+    = render 'pages/section_mission' 
+
+%section.section-chief#chief
+  .row

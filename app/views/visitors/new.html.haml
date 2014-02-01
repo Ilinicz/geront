@@ -1,8 +1,16 @@
+%section.section-intro#intro{'data-speed'=>'4', 'data-type'=>'background'}
+  = link_to '#main' do 
+    .row
+      = render 'section_intro'
   
-.row.section-about{name:'section-about'}
-  
-  = render 'section_about'
+-#%section.section-about#about
+-#  .row
+-#    = render 'section_about'
+-#
+-#%section.section-mission#mission
+-#  .row
+-#    = render 'section_mission'
 
-.row.section-mission{name:'section-mission'}
-
-  = render 'section_mission'
+%section.section-main#main
+  .row
+    = render 'section_main'

@@ -8,7 +8,7 @@
     = stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Istok+Web|Exo+2:400,300,600|Open+Sans:400,300,600,700&subset=latin,cyrillic-ext,cyrillic', :media => "all"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
-  %body
+  %body{'data-speed'=>'2', 'data-type'=>'background'}
     #wrapper.active
       = render 'layouts/sidebar'
       = render 'layouts/content'

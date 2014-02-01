@@ -12,10 +12,8 @@ img {
 body, html {
   height: 100%;
   width: 100%; 
-  background: #fff;
   font-family: 'Open Sans';
   font-weight: 400;
-  /*background-image: url(image_path('roses.jpg'));*/
 }
 
 
@@ -23,7 +21,7 @@ body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans';
   font-weight: 400;
   /*'Exo 2' "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  color: #3A3045;
+  color: #373C42;
 }
 
 .header-lead {
@@ -34,4 +32,18 @@ body, h1, h2, h3, h4, h5, h6 {
 .jumbotron {
   background-color: #fff;
   /*background-image: url(image_path('stripes.png'));*/
+}
+
+.navbar {
+  height: 100px;
+  position: relative;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.col-lead {
+  font-size: 28px;
+  font-weight: 200;
 }
